@@ -29,7 +29,8 @@ module.exports = {
     },
 
     screens: {
-      ...screens
+      ...screens,
+      ...screenSize
     }
 
   },
