@@ -1,0 +1,26 @@
+<% const fileName=/(.*)(?=\.html$)/.exec(htmlWebpackPlugin.options.filename)[1]; const reqFile=require(fileName
+  +'.ejs')({ 'htmlWebpackPlugin' : htmlWebpackPlugin, }); -%>
+  <!DOCTYPE html>
+  <html lang="zh-Hant-TW">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE" />
+    <meta property="og:type" content="website" />
+
+  </head>
+
+  <body>
+    <div id="app" class="lBd bg-[#000] overflow-hidden max-w-[1366px] pt-[810px]  m-auto">
+      <main class="flex pr-[26px] min-h-[1173px]">
+        <%- reqFile %>
+      </main>
+    </div>
+  </body>
+
+  </html>
