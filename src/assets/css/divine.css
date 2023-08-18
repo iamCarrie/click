@@ -1,0 +1,32 @@
+@import "common";
+
+.hand {
+  
+}
+
+
+@screen p {
+  .divine-click {
+    &:before {
+      content:"";
+      @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
+    }
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
+    }
+    &.is-active {
+      box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
+      &:before {
+        content:"";
+        @apply opacity-100;
+      
+      }
+    }
+  } 
+}
+
+@screen pt {
+}
+
+@screen m {
+}

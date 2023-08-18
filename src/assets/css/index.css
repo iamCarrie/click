@@ -11,7 +11,7 @@
 
 
 @screen p {
-  .lBd {
+  .lucky {
     background: url(pc_header.jpg) no-repeat top center,
       url(pc_content.jpg) no-repeat center 42.188vw,
       url(pc_footer.jpg) no-repeat bottom center;
