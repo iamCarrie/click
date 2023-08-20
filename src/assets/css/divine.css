@@ -6,6 +6,7 @@
 
 
 @screen p {
+  
   .divine-click {
     &:before {
       content:"";
@@ -25,7 +26,10 @@
   } 
 }
 
-@screen pt {
+@screen tm {
+  .swiper img{
+      width: 100%;
+  }
 }
 
 @screen m {
