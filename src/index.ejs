@@ -45,9 +45,9 @@
         </header>
         <ul class="p:flex p:flex-wrap w-full text-[#fff]">
           <% for (let j = 0; j < list.length;  j++ ) { %>
-          <li class="p:w-1/2 list-disc ">
+          <li class="p:w-1/2 hover:text-[#fff550] list-disc">
             <a href="<%- link %>">
-              <p class="font-bold p:text-[calc(28/1366*100)vw] p:pr-[calc(30/1366*100)vw] tm:text-[calc(26/theme(screens.tab)*100)vw]  hover:text-[#fff550]"><%- list[j] %></p>
+              <p class="font-bold p:text-[calc(28/1366*100)vw] p:pr-[calc(30/1366*100)vw] tm:text-[calc(26/theme(screens.tab)*100)vw]"><%- list[j] %></p>
             </a>
           </li>
           <% } %>

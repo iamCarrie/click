@@ -1,6 +1,26 @@
 @import "common";
 
+.final-card {
+    box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
+}
+.final-gift{
+    box-shadow: rgba(0, 0, 0, 0.3) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
+     &:before{
+        content:"";
+        background:url(gift.png) no-repeat center top;
+        @apply block absolute right-0 bottom-[-73px] right-[-65px] w-[130px] h-[146px];
+    }
+}
 
+.final-suggestion{
+    &:before{
+        content:"";
+        @apply block absolute left-0 bottom-[-4px] border-solid border-transparent border-l-[#000] w-0 h-0 border-t-[5px] border-b-[5px] border-l-[9px]
+    }
+}
+.more{
+    background:url(more.png) no-repeat center top;
+}
 
 @screen p {
  
