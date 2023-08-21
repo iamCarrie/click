@@ -1,11 +1,11 @@
 import 'divine.css';
 import { createApp } from 'petite-vue';
 import Swiper from 'swiper';
-import { Navigation, EffectCoverflow } from 'swiper/modules';
+// import { Navigation, EffectCoverflow } from 'swiper/modules';
 // import Swiper and modules styles
-import 'swiper/css';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 import $ from 'jquery';
 window.$ = $;
 
@@ -16,19 +16,12 @@ let windowWidth = window.innerWidth;
 
 if (windowWidth < 750) {
   const swiper = new Swiper('.swiper', {
-    // modules: [Navigation, EffectCoverflow],
+    spaceBetween: -50,
     slidesPerView: 3,
-    spaceBetween: 30,
+    centeredSlides: true,
+    roundLengths: true,
     loop: true
-    // loopAdditionalSlides: 30
-    // effect: 'coverflow',
-    // coverflowEffect: {
-    //   rotate: -30,
-    //   stretch: 10,
-    //   depth: 100,
-    //   modifier: 1,
-    //   slideShadows: true
-    // }
+
   });
 }
 

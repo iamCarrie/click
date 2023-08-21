@@ -85,6 +85,6 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "petite-vue": "^0.4.1",
-    "swiper": "^10.2.0"
+    "swiper": "^4.2.0"
   }
 }

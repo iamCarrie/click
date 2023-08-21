@@ -1,13 +1,24 @@
+@import "common/swiper.css";
 @import "common";
 
 .hand {
   background: url(hand.png) no-repeat center top;
 
-  @apply opacity-0;
+  @apply bg-contain opacity-0;
 }
 
 .divine {
   &.is-ani {
+    .divineA-bg {
+      &::after {
+        @apply scale-100 opacity-100;
+      }
+
+      &::before {
+        @apply scale-100 opacity-100;
+      }
+    }
+
     .hand {
       @apply opacity-100 delay-[1s] duration-[1s];
 
@@ -18,6 +29,40 @@
       &.right {
         animation: rotateRight 1.2s 1.2s ease-out;
       }
+    }
+  }
+}
+
+.divineA-bg {
+  &::before {
+    content: "";
+    background: url(a_kv_bg.png) no-repeat center top;
+
+    @apply transition-all block absolute bg-contain  opacity-0 scale-[0.8] delay-[0.1s] duration-[1.8s];
+  }
+
+  &::after {
+    content: "";
+    background: url(cards.png) no-repeat center top;
+
+    @apply transition-all block absolute bg-contain top-0 opacity-0 scale-[1.2] duration-[0.5s];
+  }
+}
+
+.divine-click {
+  &::before {
+    content: "";
+
+    @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
+  }
+
+  &.is-active {
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+
+    &::before {
+      content: "";
+
+      @apply opacity-100;
     }
   }
 }
@@ -52,54 +97,18 @@
 
 @screen p {
   .divine-click {
-    &::before {
-      content: "";
-
-      @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
-    }
-
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
-    }
-
-    &.is-active {
-      box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
-
-      &::before {
-        content: "";
-
-        @apply opacity-100;
-      }
     }
   }
 
   .divineA-bg {
     &::before {
-      content: "";
-      background: url(a_kv_bg.png) no-repeat center top;
-
-      @apply transition-all block absolute w-[1310px] h-[720px] opacity-0 scale-[0.8] delay-[0.1s] duration-[1.8s];
+      @apply w-[1310px] h-[720px];
     }
 
     &::after {
-      content: "";
-      background: url(cards.png) no-repeat center top;
-
-      @apply transition-all block absolute top-0 w-[1366px] h-[794px] opacity-0 scale-[1.2] duration-[0.5s];
-    }
-  }
-
-  .divine {
-    &.is-ani {
-      .divineA-bg {
-        &::after {
-          @apply scale-100 opacity-100;
-        }
-
-        &::before {
-          @apply scale-100 opacity-100;
-        }
-      }
+      @apply w-[1366px] h-[794px];
     }
   }
 }
@@ -107,6 +116,78 @@
 @screen tm {
   .swiper img {
     width: 100%;
+  }
+
+  .swiper {
+    position: relative;
+  }
+
+  .swiper > .swiper-slide__content {
+    position: absolute;
+    top: 0;
+  }
+
+  .swiper-slide {
+    transition: all 200ms linear;
+
+    button {
+      &::after {
+        content: "";
+
+        @apply absolute w-full h-full bg-[#000] left-0 top-0 opacity-50;
+      }
+
+      transition: all 200ms linear;
+
+      @apply bg-[#000] scale-[0.6];
+    }
+
+    &.swiper-slide-prev,
+    &.swiper-slide-next {
+      @apply z-[5];
+
+      button {
+        @apply scale-[0.8];
+      }
+    }
+
+    &.swiper-slide-prev {
+      img {
+        /* @apply !translate-x-[60%]; */
+      }
+    }
+
+    &.swiper-slide-next {
+      img {
+        /* @apply !-translate-x-[60%]; */
+      }
+    }
+
+    &.swiper-slide-active {
+      @apply z-10;
+
+      button {
+        @apply scale-100 z-10;
+
+        &::before {
+          @apply opacity-100;
+        }
+
+        &::after {
+          @apply opacity-0;
+        }
+      }
+    }
+  }
+
+  .divineA-bg {
+    &::before {
+      @apply w-[650px] h-[400px];
+    }
+
+    &::after {
+      @apply w-[700px] h-[400px];
+    }
   }
 }
 
