@@ -54,43 +54,9 @@ a {
   html {
     @apply text-[16px];
   }
-}
 
-@screen p {
-  .lBd {
-    @apply text-[18px];
-  }
-}
-
-@screen pMin {
-  .lBd {
-    @apply text-vmp;
-  }
-}
-
-@screen t {
-  .lBd {
-    @apply text-vmt;
-  }
-}
-
-@screen m {
-  .lBd {
-    @apply text-vmm;
-  }
-}
-
-@screen pMax {
-  body,
-  html {
+  /* .lBd {
     @apply text-[16px];
-  }
-}
-
-@screen p {
-  /* body,
-  html {
-    @apply text-[18px];
   } */
 }
 
@@ -99,6 +65,10 @@ a {
   html {
     @apply text-vmp;
   }
+
+  /* .lBd {
+    @apply text-vmp;
+  } */
 }
 
 @screen tm {
@@ -106,11 +76,8 @@ a {
   html {
     @apply text-vmt;
   }
-}
 
-/* @screen m {
-  body,
-  html {
-    @apply text-vmm;
-  }
-} */
+  /* .lBd {
+    @apply text-vmt;
+  } */
+}

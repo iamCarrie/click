@@ -31,6 +31,58 @@
       }
     }
   }
+
+  &.is-ani {
+    .divineB-bg {
+      &::before {
+        @apply opacity-100;
+      }
+    }
+
+    .star-l {
+      animation: fade 3s ease-out infinite;
+    }
+
+    .star-r {
+      animation: fade 3s ease-out infinite;
+    }
+
+    .circle-big {
+      animation: rotateR 500s ease-out infinite;
+    }
+
+    .circle-small {
+      animation: rotate 500s ease-out infinite;
+    }
+  }
+}
+
+.divine-click {
+  &::before {
+    content: "";
+
+    @apply block absolute w-full h-full border-solid border-[10px] opacity-0;
+  }
+
+  &.is-active {
+    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+
+    &::before {
+      content: "";
+
+      @apply opacity-100;
+    }
+  }
+}
+
+/* divineA */
+
+.divineA {
+  .divine-click {
+    &::before {
+      @apply border-[#206a43];
+    }
+  }
 }
 
 .divineA-bg {
@@ -46,24 +98,6 @@
     background: url(cards.png) no-repeat center top;
 
     @apply transition-all block absolute bg-contain top-0 opacity-0 scale-[1.2] duration-[0.5s];
-  }
-}
-
-.divine-click {
-  &::before {
-    content: "";
-
-    @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
-  }
-
-  &.is-active {
-    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
-
-    &::before {
-      content: "";
-
-      @apply opacity-100;
-    }
   }
 }
 
@@ -95,6 +129,104 @@
   }
 }
 
+/* divineB */
+
+.divineB {
+  .divine-click {
+    &::before {
+      @apply border-[#580482];
+    }
+  }
+}
+
+.divineB-bg {
+  &::before {
+    content: "";
+    background: url(b_kv_bg.jpg) no-repeat center top;
+
+    @apply transition-all block absolute bg-contain opacity-100 delay-[0.1s] duration-[1.8s];
+  }
+
+  &::after {
+    content: "";
+    background: url(cards.png) no-repeat center top;
+
+    @apply transition-all block absolute bg-contain top-0 opacity-0 scale-[1.2] duration-[0.5s];
+  }
+
+  h2 {
+    box-shadow: rgba(251, 83, 253, 0.8) 0 5px 20px 0,
+      rgba(251, 83, 253, 0.8) 0 0 0 1px;
+  }
+}
+
+.star-l {
+  background: url(star_left.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.star-r {
+  background: url(star_right.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.moon {
+  background: url(moon.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.sun {
+  background: url(sun.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.circle-big {
+  background: url(circle_big.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.circle-small {
+  background: url(circle_small.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+@keyframes fade {
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(3600deg);
+  }
+}
+
+@keyframes rotateR {
+  0% {
+    transform: rotate(3600deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 @screen p {
   .divine-click {
     &:hover {
@@ -111,9 +243,79 @@
       @apply w-[1366px] h-[794px];
     }
   }
+
+  .divineB-bg {
+    &::before {
+      @apply w-[1366px] h-[790px];
+    }
+  }
+
+  .star-l {
+    @apply left-0 top-0 w-[417px] h-[326px];
+  }
+
+  .star-r {
+    @apply right-0 top-0 w-[430px] h-[469px];
+  }
+
+  .moon {
+    @apply top-[50px] right-[10px] w-[417px] h-[326px];
+  }
+
+  .sun {
+    @apply left-[30px] bottom-[30px] w-[268px] h-[268px];
+  }
+
+  .circle-big {
+    @apply left-0 top-[-290px] w-[984px] h-[947px];
+  }
+
+  .circle-small {
+    @apply right-0 bottom-[-330px] w-[801px] h-[779px];
+  }
 }
 
 @screen tm {
+  .star-l {
+    @apply left-0 top-0 w-[203px] h-[145px];
+  }
+
+  .star-r {
+    @apply right-0 top-0 w-[200px] h-[212px];
+  }
+
+  .moon {
+    @apply top-[20px] right-[10px] w-[120px] h-[140px];
+  }
+
+  .sun {
+    @apply left-[20px] bottom-[20px] w-[130px] h-[130px];
+  }
+
+  .circle-big {
+    @apply left-0 top-[-150px] w-[450px] h-[450px];
+  }
+
+  .circle-small {
+    @apply right-0 bottom-[-120px] w-[353px] h-[353px];
+  }
+
+  .divineA-bg {
+    &::before {
+      @apply w-[650px] h-[400px];
+    }
+
+    &::after {
+      @apply w-[700px] h-[400px];
+    }
+  }
+
+  .divineB-bg {
+    &::before {
+      @apply w-[800px] h-[450px];
+    }
+  }
+
   .swiper img {
     width: 100%;
   }
@@ -179,17 +381,4 @@
       }
     }
   }
-
-  .divineA-bg {
-    &::before {
-      @apply w-[650px] h-[400px];
-    }
-
-    &::after {
-      @apply w-[700px] h-[400px];
-    }
-  }
-}
-
-@screen m {
 }

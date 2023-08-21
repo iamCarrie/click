@@ -36,6 +36,26 @@ module.exports = {
       description: meta.htmlDescription,
       url: meta.url,
       shareImg: meta.shareImg + meta.version
+    }, {
+      filename: 'divineB.html',
+      template: '_layout.ejs',
+      chunks: ['divine'],
+      // excludeAssets: [/index\.js/],
+      title: meta.htmlTitle,
+      shareTitle: meta.htmlShareTitle,
+      description: meta.htmlDescription,
+      url: meta.url,
+      shareImg: meta.shareImg + meta.version
+    }, {
+      filename: 'divineC.html',
+      template: '_layout.ejs',
+      chunks: ['divine'],
+      // excludeAssets: [/index\.js/],
+      title: meta.htmlTitle,
+      shareTitle: meta.htmlShareTitle,
+      description: meta.htmlDescription,
+      url: meta.url,
+      shareImg: meta.shareImg + meta.version
     },
     {
       filename: 'finalA.html',

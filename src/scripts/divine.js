@@ -34,4 +34,9 @@ window.onload = function () {
   setTimeout(function () {
     $('.divine').addClass('is-ani');
   }, 100);
+
+  $('.divine-click').on('click', function () {
+    $('.divine-click').removeClass('is-active');
+    $(this).addClass('is-active');
+  });
 };

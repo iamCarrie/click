@@ -12,16 +12,16 @@
 
 @screen p {
   .lucky {
-    background: url(pc_header.jpg) no-repeat top center,
-      url(pc_footer.jpg) no-repeat bottom center;
+    background: url(pc_footer.jpg) no-repeat bottom center;
     background-size: contain, contain;
 
     @apply relative;
   }
 
   .lucky-content {
-    background: url(pc_content.jpg) no-repeat center top;
-    background-size: 100% 100%;
+    background: url(pc_header.jpg) no-repeat top center,
+      url(pc_content.jpg) no-repeat center top;
+    background-size: contain, 100% 100%;
   }
 
   .lucky-subtitle {
@@ -46,16 +46,16 @@
 
 @screen tm {
   .lucky {
-    background: url(m_header.jpg) no-repeat top center,
-      url(m_footer.jpg) no-repeat bottom center;
-    background-size: contain, contain;
+    background: url(m_footer.jpg) no-repeat bottom center;
+    background-size: contain;
 
     @apply relative;
   }
 
   .lucky-content {
-    background: url(m_content.jpg) no-repeat center top;
-    background-size: 100% 100%;
+    background: url(m_header.jpg) no-repeat top center,
+      url(m_content.jpg) no-repeat center top;
+    background-size: contain, 100% 100%;
   }
 
   .lucky-subtitle {

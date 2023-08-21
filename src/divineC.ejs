@@ -1,22 +1,21 @@
 <% const cards=[ {img: require('a_card_1.jpg')}, {img: require('a_card_2.jpg')}, {img: require('a_card_3.jpg')}, {img:
   require('a_card_4.jpg')}, {img: require('a_card_5.jpg')} ] -%>
-  <div class="divine divineA bg-[#b2d6c3] pb-[30px]">
-    <section class="divineA-bg relative flex justify-center items-center overflow-hidden p:h-[795px] tm:h-[398px]">
-      <small
-        class="hand right absolute z-[2] p:w-[400px] p:h-[545px] p:top-[180px] p:right-[80px] tm:w-[220px] tm:h-[350px] tm:top-[80px] tm:right-[30px]"></small>
-      <small
-        class="hand left absolute  scale-x-[-1] z-[2] p:w-[400px] p:h-[545px] p:top-[180px] p:left-[80px]  tm:w-[220px] tm:h-[350px] tm:top-[80px] tm:left-[30px]"></small>
+  <div class="divine bg-[#000029]">
+    <section class="divineB-bg relative flex justify-center items-center overflow-hidden p:h-[795px] tm:h-[398px]">
+      <small></small>
       <header class="relative z-[5] transition-all duration-[0.8s] delay-[2.2s] ani-fdYIn">
         <h2
-          class="text-center text-[#0bafb0] bg-[rgba(256,256,256,0.5)] font-bold p:text-[67px] p:w-[808px] tm:text-[45px] tm:w-[530px] tm:p-[10px]">
-          未來三個月，哪方面<br>
-          容易衝動誤事帶來麻煩?
+          class="divineB-title text-center text-[#bc732b] bg-[rgba(256,256,256,0.8)] font-bold p:w-[808px] tm:w-[530px] tm:p-[10px]">
+          <b class="p:text-[67px] tm:text-[45px] ">
+            未來三個月，哪方面<br>
+            容易衝動誤事帶來麻煩?
+          </b>
         </h2>
       </header>
     </section>
-    <div class="bg-[#b2d6c3] p:p-[23px] tm:pb-[50px] tm:pt-[23px]">
-      <div class="swiper sample-slider tm:m-auto tm:w-[75vw] transition-all duration-[0.8s] delay-[2.5s] ani-fdYIn">
-        <div class="swiper-wrapper p:justify-center ">
+    <div class="bg-[#b351b4] p:p-[23px] tm:pb-[50px] tm:pt-[23px]">
+      <div class="swiper sample-slider tm:m-auto tm:w-[75vw]">
+        <div class="swiper-wrapper">
           <% for (let i=0; i < cards.length; i++ ) { %>
             <div class="swiper-slide p:p-[8px] p:!w-[247px] p:h-[446px]">
               <button type="button" class="divine-click relative">
@@ -28,13 +27,12 @@
         <!-- <div class="swiper-button-prev p:hidden"></div> -->
         <!-- <div class="swiper-button-next p:hidden"></div> -->
       </div>
-      <p
-        class="font-bold text-center p:text-[36px] p:mt-[40px] tm:text-[20px] tm:mt-[40px] transition-all duration-[2.8s] delay-[3s] ani-fdYIn">
+      <p class="font-bold text-center text-[#fff] p:text-[36px] p:mt-[40px] tm:text-[20px] tm:mt-[40px]">
         請先深呼吸靜心後，在心中反覆默念三次題目<br>憑直覺選一個與你最有連結的選項，你的問題將得到指引…</p>
-      <div class="flex justify-center p:mt-[15px] tm:mt-[30px] transition-all duration-[0.8s] delay-[3s] ani-fdYIn">
+      <div class="flex justify-center p:mt-[15px] tm:mt-[30px]">
         <div class="p:w-[495px] p:px-[15px] tm:w-[290px] tm:px-[15px]">
           <a href="finalA.html">
-            <%- require('img.ejs')({ path: require('btn_answer.png'), alt: 'click' })%>
+            <%- require('img.ejs')({ path: require('b_btn_answer.png'), alt: 'click' })%>
           </a>
         </div>
         <div class="p:w-[495px] p:px-[15px] tm:w-[290px] tm:px-[15px]">
