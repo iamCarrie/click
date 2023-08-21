@@ -14,11 +14,11 @@ module.exports = {
     // require('postcss-mixins'),
     require('postcss-nested'),
     // require('postcss-apply-class'),
-    // require('postcss-pxtorem')({
-    //   propList: ['*', '!text-shadow'],
-    //   selectorBlackList: ['lHd', 'lBd'],
-    //   minPixelValue: 3
-    // }),
+    require('postcss-pxtorem')({
+      propList: ['*', '!text-shadow'],
+      selectorBlackList: ['lHd', 'lBd'],
+      minPixelValue: 3
+    }),
     // require('postcss-px-to-viewport')([
     //   {
     //     unitToConvert: 'rpx',

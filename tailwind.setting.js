@@ -1,7 +1,7 @@
 const screenSize = {
   pc: 1366,
-  tab: 768,
-  m: 350
+  tab: 640,
+  m: 320
 };
 
 const screens = {

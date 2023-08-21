@@ -1,0 +1,161 @@
+[class*="ani-"] {
+  > * {
+    @apply opacity-0;
+  }
+}
+
+.ani-fdXIn {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateX(-15%) translateZ(0);
+}
+
+.ani-fdXInR {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateX(15%) translateZ(0);
+}
+
+/* // 預設 左至右致中 */
+.ani-fdCXIn {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateX(-55%) translateZ(0);
+}
+
+/* // 預設 上至下 */
+.ani-fdYIn {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(15%) translateX(0) translateZ(0) perspective(1px);
+}
+
+/* // 預設 下至上 */
+.ani-fdYInR {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(-15%) translateX(0) translateZ(0);
+}
+
+/* // 預設 下至上致中 */
+.ani-fdCYIn {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(15%) translateX(-50%) translateZ(0) perspective(1px);
+}
+
+/* // 預設 上至下致中 */
+.ani-fdCYInR {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: translateY(-15%) translateX(-50%) translateZ(0);
+}
+
+/* // 預設 淡入淡出 */
+.ani-scaleC {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: scale(0.8) translateX(-50%) translateZ(0);
+}
+
+.ani-scale {
+  will-change: opacity, transform;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+/* // 預設 淡入淡出 */
+.ani-fdOIn {
+  will-change: opacity;
+  opacity: 0;
+}
+
+.is-ani {
+  [class*="ani-"] {
+    > * {
+      @apply opacity-100;
+    }
+  }
+
+  .ani-fdXIn,
+  .ani-fdXInR {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+
+  /* // 預設 左至右致中 */
+  .ani-fdCXIn {
+    opacity: 1;
+    transform: translateX(0) translateZ(0);
+  }
+
+  /* // 預設 上至下 */
+  .ani-fdYIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* // 預設 下至上 */
+  .ani-fdYInR {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* // 預設 下至上致中 */
+  .ani-fdCYIn {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* // 預設 上至下致中 */
+  .ani-fdCYInR {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* // 預設 淡入淡出 */
+  .ani-scaleC {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  .ani-scale {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* // 預設 淡入淡出 */
+  .ani-fdOIn {
+    opacity: 1;
+  }
+}
+
+@keyframes updown {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes updown2 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes updown3 {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+
+  100% {
+    transform: translateY(20px);
+  }
+}

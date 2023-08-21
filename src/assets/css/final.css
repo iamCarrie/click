@@ -1,33 +1,67 @@
 @import "common";
 
 .final-card {
-    box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
-}
-.final-gift{
-    box-shadow: rgba(0, 0, 0, 0.3) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
-     &:before{
-        content:"";
-        background:url(gift.png) no-repeat center top;
-        @apply block absolute right-0 bottom-[-73px] right-[-65px] w-[130px] h-[146px];
-    }
+  box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
 }
 
-.final-suggestion{
-    &:before{
-        content:"";
-        @apply block absolute left-0 bottom-[-4px] border-solid border-transparent border-l-[#000] w-0 h-0 border-t-[5px] border-b-[5px] border-l-[9px]
-    }
+.final-gift {
+  box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 3.2px;
+
+  &::before {
+    content: "";
+    background: url(gift.png) no-repeat center top;
+
+    @apply block absolute right-0 bottom-[-73px] right-[-65px] w-[130px] h-[146px] bg-contain;
+  }
 }
-.more{
-    background:url(more.png) no-repeat center top;
+
+.final-suggestion {
+  &::before {
+    content: "";
+
+    @apply block absolute left-0 bottom-[-5px] border-solid border-transparent border-l-[#000] w-0 h-0 border-t-[5px] border-b-[5px] border-l-[9px];
+  }
+}
+
+.more {
+  background: url(more.png) no-repeat center top;
+
+  @apply bg-contain;
 }
 
 @screen p {
- 
+  .finalA {
+    &::before {
+      content: "";
+      background: url(bg_final_A.png) no-repeat center top;
+
+      @apply transition-all block absolute -translate-x-1/2 left-1/2 w-[1366px] h-[1083px] scale-110 opacity-0 duration-[0.5s];
+    }
+
+    &.is-ani {
+      &::before {
+        @apply scale-100 opacity-100;
+      }
+    }
+  }
 }
 
 @screen pt {
 }
 
-@screen m {
+@screen tm {
+  .finalA {
+    &::before {
+      content: "";
+      background: url(m_bg_final_A.png) no-repeat center top;
+
+      @apply transition-all block absolute -translate-x-1/2 left-1/2 top-[-30px] w-[640px] h-full opacity-0 scale-110 duration-[0.5s] bg-contain;
+    }
+
+    &.is-ani {
+      &::before {
+        @apply scale-100 opacity-100;
+      }
+    }
+  }
 }

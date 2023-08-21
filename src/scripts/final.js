@@ -1,20 +1,15 @@
 import 'final.css';
-import { createApp } from 'petite-vue';
+// import { pageScroll } from './common/pageScroll';
+import $ from 'jquery';
+window.$ = $;
 
 const requireAll = (requireContext) => requireContext.keys().map(requireContext);
 const req = require.context('_svg/', false, /\.svg$/);
 
 requireAll(req);
 
-createApp({
-  // exposed to all expressions
-  isNav: false,
-  subNav: '',
-  count: 0,
-  total: 480,
-  // getters
-  get plusOne() {
-    return this.count + 1;
-  }
-
-}).mount('#app');
+window.onload = function () {
+  setTimeout(function () {
+    $('.final').addClass('is-ani');
+  }, 100);
+};

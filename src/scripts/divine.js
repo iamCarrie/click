@@ -6,6 +6,8 @@ import { Navigation, EffectCoverflow } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
+import $ from 'jquery';
+window.$ = $;
 
 // init Swiper:
 // Swiper.use([Navigation, Pagination, Scrollbar, EffectCoverflow]);
@@ -35,15 +37,8 @@ const req = require.context('_svg/', false, /\.svg$/);
 
 requireAll(req);
 
-createApp({
-  // exposed to all expressions
-  isNav: false,
-  subNav: '',
-  count: 0,
-  total: 480,
-  // getters
-  get plusOne() {
-    return this.count + 1;
-  }
-
-}).mount('#app');
+window.onload = function () {
+  setTimeout(function () {
+    $('.divine').addClass('is-ani');
+  }, 100);
+};

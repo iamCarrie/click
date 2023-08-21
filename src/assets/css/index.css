@@ -1,77 +1,79 @@
 @import "common";
 
-.lucky-subtitle{
-  &:before,&:after{
-    content:"";
-    display:block;
+.lucky-subtitle {
+  &::before,
+  &::after {
+    content: "";
+    display: block;
     background: url(card.png) no-repeat top center;
     background-size: contain;
   }
 }
 
-
 @screen p {
   .lucky {
-    background: url(pc_header.jpg) no-repeat top center,url(pc_footer.jpg) no-repeat bottom center;
+    background: url(pc_header.jpg) no-repeat top center,
+      url(pc_footer.jpg) no-repeat bottom center;
     background-size: contain, contain;
+
     @apply relative;
   }
 
   .lucky-content {
-    background:url(pc_content.jpg) no-repeat center top;
+    background: url(pc_content.jpg) no-repeat center top;
     background-size: 100% 100%;
   }
 
-  .lucky-subtitle{
-    
-    &:before,&:after{
-      @apply absolute w-[calc(100/theme(screens.pc)*100)vw] h-[calc(106/theme(screens.pc)*100)vw]
+  .lucky-subtitle {
+    &::before,
+    &::after {
+      @apply absolute w-[100px] h-[106px];
     }
 
-    &:before{
-      @apply right-[calc(-50/theme(screens.pc)*100)vw] top-[calc(-20/theme(screens.pc)*100)vw]
+    &::before {
+      @apply right-[-50px] top-[-20px];
     }
 
-    &:after{
-      @apply left-[calc(-50/theme(screens.pc)*100)vw] top-[calc(-20/theme(screens.pc)*100)vw]
+    &::after {
+      @apply left-[-50px] top-[-20px];
     }
 
-    &:after{
-      transform:scaleX(-1);
+    &::after {
+      transform: scaleX(-1);
     }
   }
-
-  
 }
 
 @screen tm {
-   .lucky {
-    background: url(m_header.jpg) no-repeat top center,url(m_footer.jpg) no-repeat bottom center;
+  .lucky {
+    background: url(m_header.jpg) no-repeat top center,
+      url(m_footer.jpg) no-repeat bottom center;
     background-size: contain, contain;
+
     @apply relative;
   }
 
   .lucky-content {
-    background:url(m_content.jpg) no-repeat center top;
+    background: url(m_content.jpg) no-repeat center top;
     background-size: 100% 100%;
   }
 
-  .lucky-subtitle{
-    
-    &:before,&:after{
-      @apply absolute w-[calc(100/theme(screens.tab)*100)vw] h-[calc(106/theme(screens.tab)*100)vw]
+  .lucky-subtitle {
+    &::before,
+    &::after {
+      @apply absolute w-[100px] h-[106px];
     }
 
-    &:before{
-      @apply right-[calc(-50/theme(screens.tab)*100)vw] top-[calc(-20/theme(screens.tab)*100)vw]
+    &::before {
+      @apply right-[-50px] top-[-20px];
     }
 
-    &:after{
-      @apply left-[calc(-50/theme(screens.tab)*100)vw] top-[calc(-20/theme(screens.tab)*100)vw]
+    &::after {
+      @apply left-[-50px] top-[-20px];
     }
 
-    &:after{
-      transform:scaleX(-1);
+    &::after {
+      transform: scaleX(-1);
     }
   }
 }

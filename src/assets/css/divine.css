@@ -1,34 +1,112 @@
 @import "common";
 
 .hand {
-  
+  background: url(hand.png) no-repeat center top;
+
+  @apply opacity-0;
 }
 
+.divine {
+  &.is-ani {
+    .hand {
+      @apply opacity-100 delay-[1s] duration-[1s];
 
-@screen p {
-  
-  .divine-click {
-    &:before {
-      content:"";
-      @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
-    }
-    &:hover {
-      box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
-    }
-    &.is-active {
-      box-shadow: rgba(0, 0, 0, 0.15) calc(5/1366*100)vw calc(5/1366*100)vw 3.2px;
-      &:before {
-        content:"";
-        @apply opacity-100;
-      
+      &.left {
+        animation: rotateLeft 1.2s 1.2s ease-out;
+      }
+
+      &.right {
+        animation: rotateRight 1.2s 1.2s ease-out;
       }
     }
-  } 
+  }
+}
+
+@keyframes rotateLeft {
+  0% {
+    translate: 0 0;
+  }
+
+  30% {
+    translate: 20% -5%;
+  }
+
+  60% {
+    translate: 30% 20%;
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    translate: 0 0;
+  }
+
+  30% {
+    translate: -50% -5%;
+  }
+
+  60% {
+    translate: -40% -35%;
+  }
+}
+
+@screen p {
+  .divine-click {
+    &::before {
+      content: "";
+
+      @apply block absolute w-full h-full border-solid border-[#206a43] border-[10px] opacity-0;
+    }
+
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+    }
+
+    &.is-active {
+      box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+
+      &::before {
+        content: "";
+
+        @apply opacity-100;
+      }
+    }
+  }
+
+  .divineA-bg {
+    &::before {
+      content: "";
+      background: url(a_kv_bg.png) no-repeat center top;
+
+      @apply transition-all block absolute w-[1310px] h-[720px] opacity-0 scale-[0.8] delay-[0.1s] duration-[1.8s];
+    }
+
+    &::after {
+      content: "";
+      background: url(cards.png) no-repeat center top;
+
+      @apply transition-all block absolute top-0 w-[1366px] h-[794px] opacity-0 scale-[1.2] duration-[0.5s];
+    }
+  }
+
+  .divine {
+    &.is-ani {
+      .divineA-bg {
+        &::after {
+          @apply scale-100 opacity-100;
+        }
+
+        &::before {
+          @apply scale-100 opacity-100;
+        }
+      }
+    }
+  }
 }
 
 @screen tm {
-  .swiper img{
-      width: 100%;
+  .swiper img {
+    width: 100%;
   }
 }
 
