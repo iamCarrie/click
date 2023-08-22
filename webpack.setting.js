@@ -67,6 +67,28 @@ module.exports = {
       description: meta.htmlDescription,
       url: meta.url,
       shareImg: meta.shareImg + meta.version
+    },
+    {
+      filename: 'finalB.html',
+      template: '_layout.ejs',
+      chunks: ['final'],
+      // excludeAssets: [/index\.js/],
+      title: meta.htmlTitle,
+      shareTitle: meta.htmlShareTitle,
+      description: meta.htmlDescription,
+      url: meta.url,
+      shareImg: meta.shareImg + meta.version
+    },
+    {
+      filename: 'finalC.html',
+      template: '_layout.ejs',
+      chunks: ['final'],
+      // excludeAssets: [/index\.js/],
+      title: meta.htmlTitle,
+      shareTitle: meta.htmlShareTitle,
+      description: meta.htmlDescription,
+      url: meta.url,
+      shareImg: meta.shareImg + meta.version
     }
   ]
 };

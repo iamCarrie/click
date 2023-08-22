@@ -19,14 +19,16 @@
               lucky-subtitle relative inline-block bg-[#fff] text-center rounded-[50px] p:p-[10px] p:min-w-[465px] tm:w-full tm:p-[8px]
             ">
                 <b
-                  class="<%- color %> border-solid border-[1px] rounded-[50px] w-full block p:text-[30px] p:py-[5px] p:px-[30px] tm:py-[15px] tm:text-[30px]">
-                  <%- title %>
+                  class="<%- color %> border-solid border-[1px] rounded-[50px] w-full block  p:py-[5px] p:px-[30px] tm:py-[15px]">
+                  <span class="p:text-[30px] tm:text-[30px]">
+                    <%- title %>
+                  </span>
                 </b>
               </h3>
             </header>
-            <ul class="p:flex p:flex-wrap w-full text-[#fff]">
+            <ul class="p:flex p:flex-wrap w-full text-[#fff] tm:ml-[20px]">
               <% for (let j=0; j < list.length; j++ ) { %>
-                <li class="p:w-1/2 hover:text-[#fff550]  list-disc p:text-[28px] p:pr-[30px] tm:text-[26px]">
+                <li class="p:w-1/2 hover:text-[#fff550] list-disc py-[5px] p:text-[28px] p:pr-[30px] tm:text-[26px]">
                   <a href="<%- link %>">
                     <p class="font-bold">
                       <%- list[j] %>
