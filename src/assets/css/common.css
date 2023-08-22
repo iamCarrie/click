@@ -50,10 +50,10 @@ a {
 }
 
 @screen pMax {
-  /* body,
+  body,
   html {
     @apply text-[16px];
-  } */
+  }
 
   .lBd {
     @apply text-[16px];
@@ -61,10 +61,10 @@ a {
 }
 
 @screen pMin {
-  /* body,
+  body,
   html {
     @apply text-vmp;
-  } */
+  }
 
   .lBd {
     @apply text-vmp;
@@ -72,10 +72,10 @@ a {
 }
 
 @screen tm {
-  /* body,
+  body,
   html {
     @apply text-vmt;
-  } */
+  }
 
   .lBd {
     @apply text-vmt;

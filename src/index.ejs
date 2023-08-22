@@ -10,7 +10,7 @@
 
   <div class="lucky  p:pb-[500px] tm:pb-[160px]">
     <div
-      class="lucky-content p:pt-[750px] p:pr-[26px] p:pb-[50px] p:space-y-[100px] tm:pt-[360px] tm:px-[75px] tm:space-y-[10vw]">
+      class="lucky-content p:pt-[710px] p:pr-[26px] p:pb-[50px] p:space-y-[100px] tm:pt-[350px] tm:px-[75px] tm:space-y-[10vw]">
       <% for (let i=0; i < luckylist.length; i++ ) { %>
         <% const { title, color, list, link }=luckylist[i]; -%>
           <section class="w-full p:pl-[120px] ">
@@ -19,7 +19,7 @@
               lucky-subtitle relative inline-block bg-[#fff] text-center rounded-[50px] p:p-[10px] p:min-w-[465px] tm:w-full tm:p-[8px]
             ">
                 <b
-                  class="<%- color %> border-solid border-[1px] rounded-[50px] w-full block  p:py-[5px] p:px-[30px] tm:py-[15px]">
+                  class="<%- color %> border-solid border-[1px] rounded-[50px] w-full block  p:py-[5px] p:px-[30px] tm:py-[10px]">
                   <span class="p:text-[30px] tm:text-[30px]">
                     <%- title %>
                   </span>
@@ -28,7 +28,7 @@
             </header>
             <ul class="p:flex p:flex-wrap w-full text-[#fff] tm:ml-[20px]">
               <% for (let j=0; j < list.length; j++ ) { %>
-                <li class="p:w-1/2 hover:text-[#fff550] list-disc py-[5px] p:text-[28px] p:pr-[30px] tm:text-[26px]">
+                <li class="p:w-1/2 hover:text-[#fff550] list-disc py-[2px]  p:text-[28px] p:pr-[30px] tm:text-[26px] ">
                   <a href="<%- link %>">
                     <p class="font-bold">
                       <%- list[j] %>
