@@ -16,7 +16,7 @@ module.exports = {
     // require('postcss-apply-class'),
     require('postcss-pxtorem')({
       propList: ['*', '!text-shadow'],
-      selectorBlackList: ['lHd', 'lBd'],
+      selectorBlackList: ['lHd', 'lBd', 'to-10px'],
       minPixelValue: 3
     }),
     // require('postcss-px-to-viewport')([

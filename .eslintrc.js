@@ -3,15 +3,15 @@ module.exports = {
     browser: true,
     commonjs: true,
     es6: true,
-    node: true,
+    node: true
   },
   extends: ['airbnb-base/legacy', 'plugin:vue/recommended'],
   parserOptions: {
     parser: 'babel-eslint',
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    sourceType: 'module',
+    sourceType: 'module'
   },
   plugins: [],
   parser: 'vue-eslint-parser',
@@ -20,8 +20,8 @@ module.exports = {
     'import/no-unresolved': 0,
     'global-require': 0,
     'linebreak-style': ['error', 'windows'],
-    'max-len': ['error', {code: 150}],
-    'no-param-reassign': ['error', {props: false}],
-    'no-script-url': 0,
-  },
+    'max-len': ['error', { code: 150 }],
+    'no-param-reassign': ['error', { props: false }],
+    'no-script-url': 0
+  }
 };

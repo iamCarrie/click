@@ -10,7 +10,7 @@
       <div class="circle-small transition-all duration-[0.8s] delay-[1.9s] ani-fdOIn"></div>
       <div class="relative z-[5] transition-all duration-[0.8s] delay-[2.2s] ani-fdYIn">
         <h2
-          class="text-center text-[#bc732b] bg-[rgba(256,256,256,0.8)] font-bold p:w-[808px] tm:w-[530px] tm:p-[10px]">
+          class="text-center to-10px text-[#bc732b] bg-[rgba(256,256,256,0.8)] font-bold p:w-[808px] tm:w-[530px] tm:p-[10px]">
           <b class="p:text-[67px] tm:text-[45px] ">
             未來三個月，哪方面<br>
             容易衝動誤事帶來麻煩?
@@ -19,35 +19,30 @@
         </header>
     </section>
     <div class="bg-[#b351b4] p:p-[23px] tm:pb-[50px] tm:pt-[23px]">
-      <div class="swiper sample-slider tm:m-auto tm:w-[75vw] transition-all duration-[0.8s] delay-[2.6s] ani-fdYIn">
+      <p class="font-bold text-center my-[20px] tm:px-[20px] transition-all duration-[0.8s] delay-[2s] ani-fdYIn">
+        <span class="text-[#fff] p:text-[36px] tm:text-[28px]">
+          請先深呼吸靜心後，在心中反覆默念三次題目<br class="tm:hidden">憑直覺選一個與你最有連結的選項，你的問題將得到指引…
+        </span>
+      </p>
+      <div class="swiper sample-slider tm:m-auto tm:w-[75vw] transition-all duration-[0.8s] delay-[2.3s] ani-fdYIn">
         <div class="swiper-wrapper p:justify-center ">
           <% for (let i=0; i < cards.length; i++ ) { %>
-            <div class="swiper-slide p:p-[8px] p:!w-[247px] p:h-[446px]">
+            <div class="swiper-slide p:p-[8px] p:!w-[20%]">
               <button type="button" class="divine-click relative">
                 <%- require('img.ejs')({ path: cards[i].img, alt: 'click' })%>
               </button>
             </div>
             <% } %>
         </div>
-        <!-- <div class="swiper-button-prev p:hidden"></div> -->
-        <!-- <div class="swiper-button-next p:hidden"></div> -->
       </div>
-      <p
-        class="font-bold text-center text-[#fff]  p:mt-[40px] tm:mt-[40px] transition-all duration-[0.8s] delay-[2.9s] ani-fdYIn">
-        <span class="p:text-[36px] tm:text-[20px]">
-          請先深呼吸靜心後，在心中反覆默念三次題目<br>憑直覺選一個與你最有連結的選項，你的問題將得到指引…
-        </span>
-      </p>
-      <div class="flex justify-center p:mt-[15px] tm:mt-[30px] transition-all duration-[0.8s] delay-[3.2s] ani-fdYIn">
-        <div class="p:w-[495px] p:px-[15px] tm:w-[290px] tm:px-[15px]">
-          <a href="finalB.html">
-            <%- require('img.ejs')({ path: require('b_btn_answer.png'), alt: 'click' })%>
-          </a>
+      <div class="flex justify-center p:mt-[50px] tm:mt-[30px] transition-all duration-[0.8s] delay-[2.6s] ani-fdYIn">
+        <div class="p:px-[15px] tm:px-[5px]">
+          <%- require('mBtn.ejs')({ href: 'finalB.html' , className: 'light bg-[#b300b8] text-[#fff] hover:text-[#fff]'
+            , text:'看解答' })%>
         </div>
-        <div class="p:w-[495px] p:px-[15px] tm:w-[290px] tm:px-[15px]">
-          <a href="index.html">
-            <%- require('img.ejs')({ path: require('btn_prev.png'), alt: 'click' })%>
-          </a>
+        <div class="p:px-[15px] tm:px-[5px]">
+          <%- require('mBtn.ejs')({ href: '/' , className: 'light bg-[#212633] text-[#e1af74] hover:text-[#e1af74]' ,
+            text:'算其他題目' })%>
         </div>
       </div>
     </div>

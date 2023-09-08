@@ -8,19 +8,18 @@
   ,'中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓中秋超級月圓，哪種運勢可以迎向圓滿？，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？','中秋超級月圓，哪種運勢可以迎向圓滿？'
   ] } ] -%>
 
-  <div class="lucky  p:pb-[500px] tm:pb-[160px]">
-    <div
-      class="lucky-content p:pt-[710px] p:pr-[26px] p:pb-[50px] p:space-y-[100px] tm:pt-[350px] tm:px-[75px] tm:space-y-[10vw]">
+  <div class="lucky p:pb-[490px] tm:pb-[130px]">
+    <div class="lucky-content p:pt-[710px] p:pr-[26px] p:space-y-[100px]  tm:pt-[350px] tm:px-[75px] tm:space-y-[10vw]">
       <% for (let i=0; i < luckylist.length; i++ ) { %>
         <% const { title, color, list, link }=luckylist[i]; -%>
           <section class="w-full p:pl-[120px] ">
             <header class="p:mb-[45px] tm:mb-[30px]">
               <h3 class="
-              lucky-subtitle relative inline-block bg-[#fff] text-center rounded-[50px] p:p-[10px] p:min-w-[465px] tm:w-full tm:p-[8px]
+              lucky-subtitle relative inline-block bg-[#fff] text-center rounded-[50px] to-10px p:p-[10px] p:min-w-[465px] tm:w-full tm:p-[8px]
             ">
                 <b
                   class="<%- color %> border-solid border-[1px] rounded-[50px] w-full block  p:py-[5px] p:px-[30px] tm:py-[10px]">
-                  <span class="p:text-[30px] tm:text-[30px]">
+                  <span class="text-[30px]">
                     <%- title %>
                   </span>
                 </b>
@@ -29,7 +28,7 @@
             <ul class="p:flex p:flex-wrap w-full text-[#fff] tm:ml-[20px]">
               <% for (let j=0; j < list.length; j++ ) { %>
                 <li class="p:w-1/2 hover:text-[#fff550] list-disc py-[2px]  p:text-[28px] p:pr-[30px] tm:text-[26px] ">
-                  <a href="<%- link %>">
+                  <a href="<%- link %>" class="text-[#fff] hover:text-[#fff550]">
                     <p class="font-bold">
                       <%- list[j] %>
                     </p>

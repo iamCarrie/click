@@ -1,4 +1,4 @@
-@import "common";
+@import 'common';
 
 .final-card {
   box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
@@ -7,17 +7,16 @@
 .final-gift {
   box-shadow: rgba(0, 0, 0, 0.3) 5px 5px 3.2px;
 
-  &::before {
-    content: "";
-    background: url(gift.png) no-repeat center top;
+  button {
+    background: url(gift.gif) no-repeat center top;
 
-    @apply block absolute right-0 bottom-[-73px] right-[-65px] w-[130px] h-[146px] bg-contain;
+    @apply block absolute  bottom-[-73px] right-[-65px] w-[125px] h-[197px] bg-contain;
   }
 }
 
 .final-suggestion {
   &::before {
-    content: "";
+    content: '';
 
     @apply block absolute left-0 bottom-[-5px] border-solid border-transparent border-l-[#000] w-0 h-0 border-t-[5px] border-b-[5px] border-l-[9px];
   }
@@ -32,7 +31,7 @@
 .finalA {
   .final-suggestion {
     &::before {
-      content: "";
+      content: '';
 
       @apply border-l-[#000];
     }
@@ -41,7 +40,7 @@
 
 .finalB {
   &::before {
-    content: "";
+    content: '';
     background: url(bg_final_B.png) no-repeat center top;
 
     @apply transition-all block absolute -translate-x-1/2 left-1/2 w-[1366px] h-full bg-cover;
@@ -49,7 +48,7 @@
 
   .final-suggestion {
     &::before {
-      content: "";
+      content: '';
 
       @apply border-l-[#fff];
     }
@@ -91,6 +90,73 @@
   @apply bg-contain absolute;
 }
 
+/* finalC */
+.finalC {
+  &::before {
+    content: '';
+    background: url(bg_final_c.png) no-repeat center top;
+
+    @apply transition-all block absolute -translate-x-1/2 left-1/2  h-full;
+  }
+
+  .final-suggestion {
+    &::before {
+      content: '';
+
+      @apply border-l-[#fff];
+    }
+  }
+}
+
+.final-item-1 {
+  background: url(final_item_1.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-2 {
+  background: url(final_item_2.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-3 {
+  background: url(final_item_3.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-4 {
+  background: url(final_item_4.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-5 {
+  background: url(final_item_5.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-6 {
+  background: url(final_item_6.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+}
+
+.final-item-7 {
+  background: url(final_item_7.png) no-repeat center top;
+
+  @apply bg-contain absolute;
+
+  &::before {
+    content: '';
+    background: url(final_light_7.png) no-repeat center top;
+
+    @apply bg-contain absolute;
+  }
+}
+
 @keyframes fade {
   0%,
   100% {
@@ -125,16 +191,25 @@
 @screen p {
   .finalA {
     &::before {
-      content: "";
+      content: '';
       background: url(bg_final_A.png) no-repeat center top;
 
-      @apply transition-all block absolute -translate-x-1/2 left-1/2 w-[1366px] h-[1083px] scale-110 opacity-0 duration-[0.5s];
+      @apply bg-contain transition-all block absolute -translate-x-1/2 left-1/2 w-[1366px] h-[1083px] scale-110 opacity-0 duration-[0.5s];
     }
 
     &.is-ani {
       &::before {
         @apply scale-100 opacity-100;
       }
+    }
+  }
+
+  .finalC {
+    &::before {
+      content: '';
+      background: url(bg_final_c.png) no-repeat center top;
+
+      @apply w-[1366px] bg-cover;
     }
   }
 
@@ -157,6 +232,12 @@
   .star-t {
     @apply top-0 left-[300px] w-[546px] h-[239px];
   }
+
+  .final-item-7 {
+    &::before {
+      @apply left-[-210px] top-[-40px] w-[597px] h-[336px];
+    }
+  }
 }
 
 @screen pt {
@@ -165,8 +246,9 @@
 @screen tm {
   .finalA {
     &::before {
-      content: "";
-      background: url(m_bg_final_A.png) no-repeat center top;
+      content: '';
+
+      /* background: url(m_bg_final_A.png) no-repeat center top; */
       background-size: 100% auto;
 
       @apply transition-all block absolute -translate-x-1/2 left-1/2 top-[-30px] w-[640px] h-full opacity-0 scale-110 duration-[0.5s];
@@ -193,5 +275,21 @@
 
   .star-l {
     @apply top-[400px] left-0 w-[218px] h-[595px];
+  }
+
+  .finalC {
+    &::before {
+      content: '';
+      background: url(bg_final_c.png) no-repeat center top;
+      background-size: 100% 100%;
+
+      @apply w-[750px];
+    }
+  }
+
+  .final-item-7 {
+    &::before {
+      @apply left-[-130px] top-[-40px] w-[400px] h-[230px];
+    }
   }
 }

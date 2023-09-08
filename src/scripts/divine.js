@@ -33,7 +33,7 @@ requireAll(req);
 window.onload = function () {
   setTimeout(function () {
     $('.divine').addClass('is-ani');
-  }, 100);
+  }, 1000);
 
   $('.divine-click').on('click', function () {
     $('.divine-click').removeClass('is-active');

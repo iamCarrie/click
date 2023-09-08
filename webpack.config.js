@@ -72,7 +72,7 @@ module.exports = {
       path.resolve('src/' + filePath.component),
       path.resolve('src/' + filePath.container),
       // path.resolve('src/'+filePath.fonts),
-      path.resolve('src/'+filePath.svgs),
+      path.resolve('src/' + filePath.svgs),
       // path.resolve('src/static/json'),
       'node_modules'
     ]
@@ -100,16 +100,20 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|gif|svg)$/i,
-        type: 'asset',
+        type: 'asset/resource',
         include: path.resolve(__dirname, `src/${filePath.imgs}`),
         generator: {
           filename: '[path][name][ext]?[hash:8]'
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 1 * 1024
+          }
         },
         use: [
           {
             loader: ImageMinimizerPlugin.loader,
             options: {
-              // severityError: 'warning',
               minimizerOptions: {
                 plugins: [
                   ['gifsicle', {
@@ -130,7 +134,6 @@ module.exports = {
                         name: 'removeViewBox',
                         active: false
                       }
-
                     ])
                   }]
                 ]

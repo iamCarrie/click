@@ -1,5 +1,5 @@
-@import "common/swiper.css";
-@import "common";
+@import 'common/swiper.css';
+@import 'common';
 
 .hand {
   background: url(hand.png) no-repeat center top;
@@ -7,11 +7,15 @@
   @apply bg-contain opacity-0;
 }
 
+.scale-x-\[-1\] {
+  transform: scaleX(-1);
+}
+
 .divine {
   &.is-ani {
     .divineA-bg {
       &::after {
-        @apply scale-100 opacity-100;
+        animation: cards 1.2s 1.2s ease-out forwards;
       }
 
       &::before {
@@ -30,9 +34,7 @@
         animation: rotateRight 1.2s 1.2s ease-out;
       }
     }
-  }
 
-  &.is-ani {
     .divineB-bg {
       &::before {
         @apply opacity-100;
@@ -59,21 +61,20 @@
 
 .divine-click {
   &::before {
-    content: "";
+    content: '';
 
     @apply block absolute w-full h-full border-solid border-[10px] opacity-0;
   }
 
   &.is-active {
-    box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
-
     &::before {
-      content: "";
+      content: '';
 
       @apply opacity-100;
     }
   }
 }
+
 
 /* divineA */
 
@@ -82,22 +83,49 @@
     &::before {
       @apply border-[#206a43];
     }
+
+    &.is-active,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+    }
   }
 }
 
 .divineA-bg {
   &::before {
-    content: "";
+    content: '';
     background: url(a_kv_bg.png) no-repeat center top;
 
-    @apply transition-all block absolute bg-contain  opacity-0 scale-[0.8] delay-[0.1s] duration-[1.8s];
+    @apply transition-all block absolute bg-contain opacity-0 scale-[0.7] delay-[0.1s] duration-[1.8s];
   }
 
   &::after {
-    content: "";
+    content: '';
     background: url(cards.png) no-repeat center top;
 
-    @apply transition-all block absolute bg-contain top-0 opacity-0 scale-[1.2] duration-[0.5s];
+    @apply block absolute bg-contain opacity-0 scale-[0.7];
+  }
+}
+
+@keyframes cards {
+  0% {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+
+  30% {
+    opacity: 1;
+    transform: scale(0.7);
+  }
+
+  60% {
+    opacity: 1;
+    transform: scale(0.7);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
   }
 }
 
@@ -136,26 +164,32 @@
     &::before {
       @apply border-[#580482];
     }
+
+    &.is-active,
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
+    }
   }
 }
 
 .divineB-bg {
   &::before {
-    content: "";
+    content: '';
     background: url(b_kv_bg.jpg) no-repeat center top;
 
     @apply transition-all block absolute bg-contain opacity-100 delay-[0.1s] duration-[1.8s];
   }
 
   &::after {
-    content: "";
+    content: '';
     background: url(cards.png) no-repeat center top;
 
     @apply transition-all block absolute bg-contain top-0 opacity-0 scale-[1.2] duration-[0.5s];
   }
 
   h2 {
-    box-shadow: rgba(251, 83, 253, 0.8) 0 5px 20px 0,
+    box-shadow:
+      rgba(251, 83, 253, 0.8) 0 5px 20px 0,
       rgba(251, 83, 253, 0.8) 0 0 0 1px;
   }
 }
@@ -196,6 +230,68 @@
   @apply bg-contain absolute;
 }
 
+/* divineC */
+
+.divineC {
+  .divine-click {
+    &::before {
+      @apply border-[#cb9936];
+    }
+
+    &.is-active,
+    &:hover {
+      box-shadow: rgba(256, 256, 256, 0.5) 5px 5px 3.2px;
+    }
+  }
+}
+
+.divineC-bg {
+  background: url(c_kv_bg.jpg) no-repeat center top;
+
+  @apply bg-contain;
+
+  &::before {
+    content: '';
+
+    /* background: url(c_kv_bg.jpg) no-repeat center top; */
+
+    @apply transition-all block absolute bg-contain opacity-100 delay-[0.1s] duration-[1.8s];
+  }
+}
+
+.crystalball {
+  &::before {
+    content: '';
+    background: url(crystalball.png) no-repeat center top;
+
+    @apply block bg-contain;
+  }
+}
+
+.ball {
+  animation: color 3s ease-out infinite;
+
+  &::before {
+    content: '';
+    background: url(ball.png) no-repeat center top;
+
+    @apply block bg-contain absolute w-full h-full;
+  }
+}
+
+.item {
+  background: url(item.png) no-repeat center top;
+  animation: up 3s ease-in-out infinite;
+
+  @apply bg-contain absolute;
+}
+
+.crystalball {
+  .ball {
+    background: #84ade8;
+  }
+}
+
 @keyframes fade {
   0%,
   100% {
@@ -227,12 +323,66 @@
   }
 }
 
+@keyframes up {
+  0%,
+  100% {
+    transform: translateY(0%);
+  }
+
+  30% {
+    transform: translateY(15%);
+  }
+}
+
+@keyframes color {
+  0%,
+  100% {
+    background-color: #84ade8;
+  }
+
+  10% {
+    background-color: #93c7e4;
+  }
+
+  20% {
+    background-color: #75d9dc;
+  }
+
+  30% {
+    background-color: #71dbb1;
+  }
+
+  40% {
+    background-color: #a2c75f;
+  }
+
+  40% {
+    background-color: #ffe945;
+  }
+
+  60% {
+    background-color: #ff8a5f;
+  }
+
+  70% {
+    background-color: #df7bd8;
+  }
+
+  80% {
+    background-color: #a377ca;
+  }
+
+  90% {
+    background-color: #ffe945;
+  }
+}
+
 @screen p {
-  .divine-click {
+  /* .divine-click {
     &:hover {
       box-shadow: rgba(0, 0, 0, 0.15) 5px 5px 3.2px;
     }
-  }
+  } */
 
   .divineA-bg {
     &::before {
@@ -240,7 +390,7 @@
     }
 
     &::after {
-      @apply w-[1366px] h-[794px];
+      @apply top-[-220px] w-[1724px] h-[1268px];
     }
   }
 
@@ -272,6 +422,12 @@
 
   .circle-small {
     @apply right-0 bottom-[-330px] w-[801px] h-[779px];
+  }
+
+  .crystalball {
+    &::before {
+      @apply w-[353px] h-[151px];
+    }
   }
 }
 
@@ -306,13 +462,23 @@
     }
 
     &::after {
-      @apply w-[700px] h-[400px];
+      @apply w-[1000px] h-[680px];
     }
   }
 
   .divineB-bg {
     &::before {
       @apply w-[800px] h-[450px];
+    }
+  }
+
+  .divineC-bg {
+    @apply bg-cover;
+  }
+
+  .crystalball {
+    &::before {
+      @apply w-[200px] h-[100px];
     }
   }
 
@@ -334,7 +500,7 @@
 
     button {
       &::after {
-        content: "";
+        content: '';
 
         @apply absolute w-full h-full bg-[#000] left-0 top-0 opacity-50;
       }

@@ -11,5 +11,12 @@ requireAll(req);
 window.onload = function () {
   setTimeout(function () {
     $('.final').addClass('is-ani');
-  }, 100);
+  }, 1000);
+
+  $('.j-pop-btn').on('click', function () {
+    $('.j-pop').removeClass('opacity-0 pointer-events-none');
+  });
+  $('.j-pop-close').on('click', function () {
+    $('.j-pop').addClass('opacity-0 pointer-events-none');
+  });
 };

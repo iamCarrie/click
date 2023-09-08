@@ -16,10 +16,25 @@
   </head>
 
   <body>
-    <div id="app" class="lBd bg-[#000] overflow-hidden w-full m-auto max-w-[1366px] j-page-scroll">
+    <div id="app" class="lBd relative bg-[#000] overflow-hidden w-full m-auto max-w-[1366px] j-page-scroll">
       <main class="">
         <%- reqFile %>
       </main>
+      <div
+        class="absolute flex items-center justify-center bg-[rgba(0,0,0,0.5)] w-full h-full top-0 left-0 transition-all opacity-0 pointer-events-none j-pop">
+        <div
+          class="bg-[#fff] flex flex-col items-center justify-center p-[20px] p:w-[700px] p:h-[400px] tm:w-[500px] tm:h-[300px] rounded-[10px]">
+          <p class="text-center font-bold mb-[30px] text-[35px]">分享結果</p>
+          <div class="flex p:space-x-[70px] tm:space-x-[50px]">
+            <button type="button" class="p:w-[130px] tm:w-[100px]">
+              <%- require('img.ejs')({ path: require('line.png'), alt: 'click' })%>
+            </button>
+            <button type="button" class="p:w-[130px] tm:w-[100px]">
+              <%- require('img.ejs')({ path: require('fb.png'), alt: 'click' })%>
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 

@@ -19,7 +19,8 @@
   }
 
   .lucky-content {
-    background: url(pc_header.jpg) no-repeat top center,
+    background:
+      url(pc_header.jpg) no-repeat top center,
       url(pc_content.jpg) no-repeat center top;
     background-size: contain, 100% 100%;
   }
@@ -53,7 +54,8 @@
   }
 
   .lucky-content {
-    background: url(m_header.jpg) no-repeat top center,
+    background:
+      url(m_header.jpg) no-repeat top center,
       url(m_content.jpg) no-repeat center top;
     background-size: contain, 100% 100%;
   }
